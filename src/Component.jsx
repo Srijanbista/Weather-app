@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toCelsius from "./Celsius";
 import Loader from "./Loader";
 import SearchBar from "./SearchBar";
 
@@ -10,6 +11,10 @@ function Component() {
   const [isLoading, setLoading] = useState(true);
   const [feelsLike, setFeelsLike] = useState(0);
   const [data, setData] = useState();
+
+  document.getElementById("title").innerHTML = `${city} ${toCelsius(
+    feelsLike
+  )} C`;
 
   useEffect(() => {
     const getData = async () => {

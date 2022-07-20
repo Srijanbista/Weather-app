@@ -11,7 +11,7 @@ function WeatherText(props) {
       return (
         <>
           <h1>{props.city}</h1>
-          <h1>{toCelsius(props.feelsLike)}</h1>
+          <h1>{toCelsius(props.feelsLike)} C</h1>
         </>
       );
     }
